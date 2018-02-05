@@ -1,5 +1,5 @@
 const Hapi = require('hapi');
-// const models = require('./models');
+
 
 // create the server
 const server = new Hapi.Server();
@@ -14,11 +14,11 @@ server.route(require('./lib/route'));
 //   });
 // });
 if (!module.parent) {
-  server.start((err) => {
-    if (err) {
-      throw (err);
-    }
-    console.log('Server started at port 3000');
-  });
+	server.start((err) => {
+		if (err) {
+			throw (err);
+		}
+		console.log('Server started at port 3000');
+	});
 }
 module.exports = server;
